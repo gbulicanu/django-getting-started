@@ -10,3 +10,7 @@ def welcome(request):
 
 def date(request):
     return HttpResponse(f"This page was server at {datetime.now()}")
+
+
+def about(request):
+    return HttpResponse("I'm Gheorghe and I watch courses on Pluralsight!")
