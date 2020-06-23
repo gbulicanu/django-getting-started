@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Room {{room.title}}</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}Room {{room.title}}{% endblock %}
+{% block content %}
     <h1>{{room.title}}</h1>
     <p>
         This room is on floor {{room.floor}}, and
@@ -13,5 +9,4 @@
     <p>
         <a href="{% url 'rooms-list' %}">Back to Meeting rooms</a>
     </p>
-</body>
-</html>
+{% endblock %}
