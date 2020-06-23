@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meeting Room</title>
+</head>
+<body>
+    <h1>
+        Meeting Rooms
+    </h1>
+    <ul>
+        {% for room in rooms %}
+            <li>
+                <a href="{% url 'room-detail' room.id %}">
+                    {{room.name}}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <p>
+        <a href="{% url 'home' %}">Back to Home</a>
+    </p>
+</body>
+</html>
