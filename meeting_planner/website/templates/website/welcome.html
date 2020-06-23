@@ -1,13 +1,6 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Django Meeting Planner - Home</title>
-    <link rel="stylesheet" href="{% static 'website/site.css' %}" />
-    <link rel="shortcut icon" type="image/png" href="{% static 'website/favicon.ico'%}" />
-</head>
-<body>
+{% block content %}
     <h1>Welcome to Meeting Planner!</h1>
     <p>
         This is a demo application for the course
@@ -31,5 +24,4 @@
     <p>
         <a href="{% url 'rooms-list' %}">Meeting rooms</a>
     </p>
-</body>
-</html>
+{% endblock %}
