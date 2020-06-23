@@ -8,13 +8,13 @@ from meetings.models import Meeting, Room
 
 def welcome(request):
     return render(request,
-                  "website/welcome.html",
-                  {"meetings": Meeting.objects.all(),
-                   "rooms": Room.objects.all()})
+                  'website/welcome.html',
+                  {'meetings': Meeting.objects.all(),
+                   'rooms': Room.objects.all()})
 
 
 def date(request):
-    return HttpResponse(f"This page was server at {datetime.now()}")
+    return HttpResponse(f'This page was server at {datetime.now()}')
 
 
 def about(request):
