@@ -2,14 +2,22 @@
 {% load static %}
 {% block title %}Django Meeting Planner - Home{% endblock %}
 {% block content %}
-    <h1>Welcome to Meeting Planner!</h1>
-    <p>
-        This is a demo application for the course
-        <em>Django: Getting started</em>
-        on <a href="https://www.pluralsight.com">
-        Pluralsight</a>.
-    </p>
-    <img src="{% static 'website/images/calendar.png' %}" width="100px">
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to Django Planner!</h1>
+        <p class="lead">
+            This is a demo application for the course
+            <em><a href="https://www.pluralsight.com/courses/django-getting-started">Django: Getting started</a></em>
+            on <a href="https://www.pluralsight.com/">
+            Pluralsight</a>.
+        </p>
+        <img src="{% static 'website/images/calendar.png' %}" width="100px">
+        <hr class="my-4">
+        <p>
+            It uses Django Framework on the backed.
+        </p>
+        <a class="btn btn-primary btn-lg" href="https://www.djangoproject.com/" role="button">Learn more</a>
+    </div>
+
     <h2>
         Meetings
     </h2>
