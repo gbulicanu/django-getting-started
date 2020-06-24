@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+{% load tags %}
+{% url 'home' as meetings_list %}
+{% url 'rooms-list' as rooms_list %}
+{% url 'about' as about_page %}
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
@@ -28,16 +31,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item active">
+                <li class="nav-item {%active meetings_list%}">
                     <a class="nav-link" href="{% url 'home' %}">
                         Meetings
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {%active rooms_list%}">
                     <a class="nav-link" href="{% url 'rooms-list' %}">Rooms</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {%active about_page%}">
                     <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
             </ul>
