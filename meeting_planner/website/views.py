@@ -9,8 +9,7 @@ from meetings.models import Meeting, Room
 def welcome(request):
     return render(request,
                   'website/welcome.html',
-                  {'meetings': Meeting.objects.all(),
-                   'rooms': Room.objects.all()})
+                  {'meetings': Meeting.objects.all()})
 
 
 def date(request):
@@ -18,4 +17,4 @@ def date(request):
 
 
 def about(request):
-    return HttpResponse("I'm Gheorghe and I watch courses on Pluralsight!")
+    return render(request, 'website/about.html')
