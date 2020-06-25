@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.forms import modelform_factory
 
 from .models import Meeting, Room
 
@@ -16,3 +17,11 @@ def rooms_list(request):
 def room_detail(request, id):
     room = get_object_or_404(Room, pk=id)
     return render(request, 'meetings/room_detail.html', {'room': room})
+
+
+MeetingForm = modelform_factory(Meeting, exclude=[])
+
+
+def new(request):
+    form = MeetingForm()
+    return render(request, "meetings/new.html", {'form': form})
