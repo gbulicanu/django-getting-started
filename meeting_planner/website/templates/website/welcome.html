@@ -31,6 +31,9 @@
         {% endfor %}
     </ul>
     <p>
+        <a class="btn btn-primary btn-lg" href="{% url 'new-meeting' %}" role="button">Create New</a>
+    </p>
+    <p>
         <a href="{% url 'rooms-list' %}">Meeting rooms</a>
     </p>
 {% endblock %}
