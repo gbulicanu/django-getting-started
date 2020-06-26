@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.forms import modelform_factory
 
 from .models import Meeting, Room
+from .forms import MeetingForm
 
 
 def detail(request, id):
@@ -17,9 +18,6 @@ def rooms_list(request):
 def room_detail(request, id):
     room = get_object_or_404(Room, pk=id)
     return render(request, 'meetings/room_detail.html', {'room': room})
-
-
-MeetingForm = modelform_factory(Meeting, exclude=[])
 
 
 def new(request):
