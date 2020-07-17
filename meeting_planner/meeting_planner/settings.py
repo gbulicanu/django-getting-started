@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'meeting_planner.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'DjangoMeetingPlanner',
+        'HOST': 'localhost\SqlExpress',
+        'OPTIONS': {
+            'driver': 'SQL Server Native Client 11.0',
+        },
     }
 }
 
